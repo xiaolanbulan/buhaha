@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>toggle</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style>
+input{font-size: 20px; padding: 5px;}
+div{width: 300px; height: 300px; background: #ccc; /*display: none;*/}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(function (){
+	/*$('input').toggle(function (){
+		// $('div').show();
+		$('div').animate({width:'500px',height:'500px'},function (){
+			$('div').css('background','green');
+		})
+	},function (){
+		// $('div').hide();
+		$('div').animate({width:'300px',height:'300px'},function (){
+			$('div').css('background','#ccc');
+		})
+	})*/
+
+	$('input').toggle(function (){
+		alert('11');
+	},function (){
+		alert('22');
+	},function (){
+		alert('33');
+	})
+})
+</script>
+</head>
+<body>
+<input type="button" value="切换">
+<div id="div"></div>
+</body>
+</html>

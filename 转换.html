@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>转换</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style>
+#div1{ height:200px; width:200px; background:#ccc;}
+</style>
+<script src="jquery.js"></script>
+<script>
+$(function (){
+	// $("#div1").click(function (){
+	// 	// this.style.background="red";//原生的this用法
+	// 	// this.css("background","red");//不识别原生this和JQ一起使用的写法
+	// 	$(this).css("background","red");//jquery的写法 $(this)
+	// });
+
+	// $("#div1").click(function (){
+	// 	var oDiv=document.getElementById("div1");
+	// 	oDiv.css("background","red");//不识别
+	// 	// $(oDiv).css("background","red");//用$()包住
+	// });
+
+	$("div").click(function (){
+		$("div").get(1).style.background="green";//原生的写法用get(0)转化后才能识别$("#div1")
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+<div>123</div>
+</body>
+</html>

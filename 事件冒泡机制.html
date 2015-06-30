@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ阻止冒泡</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style>
+#div1{ height:200px; width:100px; background:red; display:none;}
+</style>
+<script src="jquery.js"></script>
+<script>
+/*window.onload=function (){
+	var oBtn=document.getElementById("btn1");
+	var oDiv=document.getElementById("div1");
+	oBtn.onclick=function (ev){
+		var oEvent=ev||event;
+		oEvent.cancelBubble=true;//原生阻止冒泡写法
+		oDiv.style.display="block";
+	}
+	document.onclick=function (){
+		oDiv.style.display="none";
+	}
+}*/
+
+$(function (){
+	/*$("#btn1").click(function (e){
+		$("#div1").css("display","block");
+		e.stopPropagation();
+		//return false;
+	});
+	$(document).click(function (){
+		$("#div1").css("display","none");
+	});*/
+
+});
+</script>
+</head>
+
+<body>
+<input type="button" id="btn1" value="切换"/>
+<div id="div1"></div>
+</body>
+</html>
